@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    Chuỗi số đã nhập là: <p id ="in"></p>
+    <input type="text" name="text" id="input"/>
+    <button onclick="pushData();">Nhập từng phần tử</button>
+    <button onclick = "sortData()">Sắp xếp</button>
+    <br>
+    Chuỗi số sau khi xếp là: <p id="out"></p>
+</head>
+<body>
+<script>
+    let list = [];
+    function pushData(){
+        let input = document.getElementById("input").value;
+        list.push(input);
+        document.getElementById("in").innerHTML = list;
+    }
+    function sortData(){
+        list.sort((a, b) => a - b);
+        document.getElementById("out").innerHTML = list;
+    }
+</script>
+</body>
+</html>

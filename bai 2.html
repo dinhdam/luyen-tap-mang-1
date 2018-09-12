@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+     let litter =[4,5,-7,23,24,12,30,7,12,11];
+    let max = litter[0];
+     let pos = "" ;
+     for (i in litter){
+         if(litter[i] > max){
+             max = litter[i];
+     pos = litter.indexOf(litter[i]);
+     }
+     }
+     alert("Phần tử lớn nhất là " + max + " và có vị trí ở trong mảng là " + pos);
+</script>
+</body>
+</html>

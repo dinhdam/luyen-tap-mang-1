@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" name="text" id="inputText"/>
+<button onclick="pushData();">Nhập từng phần tử</button>
+<br>
+<input type="text" name="text" id="FindText"/>
+<button onclick="FindData();">Tìm</button>
+<script>
+    let list = [];
+    let end = 0;
+    let result = "";
+    function pushData(){
+        let inputText = document.getElementById('inputText').value;
+        list.push(inputText);
+    }
+    function FindData(){
+        let find = document.getElementById('FindText').value;
+        for(let i in list){
+            end++;
+            if(find === list[i]){
+                result = find + " is in the array";
+            }else{
+                end++;
+                if ( end > list.length){
+                    result = find + " is not in the array";
+                }
+            }
+        }
+        alert(result);
+    }
+</script>
+
+
+
+
+</body>
+</html>
